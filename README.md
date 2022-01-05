@@ -377,3 +377,132 @@ git branch newBranch
 ```
 git branch
 ```
+
+#### 44. Switch to nwew branch
+
+```
+git switch newBranch
+```
+
+#### 45. Rename branch
+
+```
+git branch -m newBranch newNameofBranch
+```
+
+#### 46. Delete branch
+
+```
+git branch -d  newNameofBranch
+```
+
+- use `-D` to forcefully delete the branch even if you haven't commit it.
+
+#### 47. View two branches commits
+
+```
+git log  master..newNameofBranch
+```
+
+#### 48. View code changes between two branches commits
+
+```
+git diff  master..newNameofBranch
+```
+
+#### 49. View files changes between two branches commits
+
+```
+git diff  --name-only master..newNameofBranch
+
+or
+
+git diff  --name-status master..newNameofBranch
+```
+
+# Git Stashing
+
+It means putting the changes into the save place without committing it to the repo.
+
+#### 50. Stash a change
+
+```
+git stash push -m "My first Stash"
+```
+
+#### 51. Add all files to Stash
+
+```
+git stash push -am "Add all Stash" # -a mean all and m mean message.
+```
+
+#### 51. View all Stashes
+
+```
+git stash list
+```
+
+#### 52. View changes in the Stash
+
+```
+git stash show @stash{1}  # @stash{1} is id from point 51
+
+or
+
+git stash show 1  # 1 is sequence of stashes
+```
+
+#### 53. Add stash into working directory (master branch)
+
+```
+git stash apply @stash{1}  # @stash{1} is id from point 51
+
+or
+
+git stash apply 1  # 1 is sequence of stashes
+```
+
+#### 54. drop stash
+
+```
+git stash drop @stash{1}  # @stash{1} is id from point 51
+
+or
+
+git stash drop 1  # 1 is sequence of stashes
+```
+
+#### 54. drop all stash
+
+```
+git stash clear
+
+```
+
+# Git Merge
+
+Merging mean combining the branch changes with the master branch. Two type of merge
+
+1. Fast Forward
+2. 3 ways Merge
+
+#### 55. Merge with Fast Forward
+
+```
+git log --oneline -a --graph
+
+```
+
+#### 56. Merge with Fast Forward
+
+```
+git merge newNameofBranch
+
+```
+
+#### 57. Merge with No Fast Forward
+
+```
+git merge --no-ff newNameofBranch
+
+```
