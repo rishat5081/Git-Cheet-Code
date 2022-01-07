@@ -622,11 +622,11 @@ Cherry Pick is feature you want from some commit and want to add into the master
 
 Rebase is as follows:
 
-### Before Rebase
+### Before Cherry Pick
 
 <img src='./beforeCherryPick.png' alt="Before Cherry Pick"/>
 
-### After Rebase
+### After Cherry Pick
 
 <img src='./afterCherryPick.png' alt="After Cherry Pick"/>
 
