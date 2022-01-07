@@ -684,3 +684,27 @@ git pull --rebase
 ```
 
 <img src='./git pull rebase.png' alt="Git Pull Rebase"/>
+
+# Git Push tags
+
+Git push did not sent tags to remote repo. You have to send it manually.
+
+#### 67. Push Tag to remote Repo
+
+```
+git tag v.11  # create Tag
+
+git push origin v.11
+```
+
+#### 68. Remove Tag from remote Repo
+
+```
+git push  origin --delete v.11
+```
+
+#### 69. Remove Tag from Repo
+
+```
+git -d v.11
+```
