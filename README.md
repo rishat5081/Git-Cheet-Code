@@ -481,10 +481,11 @@ git stash clear
 
 # Git Merge
 
-Merging mean combining the branch changes with the master branch. Two type of merge
+Merging mean combining the branch changes with the master branch. Three type of merge
 
 1. Fast Forward
 2. 3 ways Merge
+3. Squash Merge
 
 ## Fast Forward Merge
 
@@ -549,5 +550,91 @@ git branch --merged
 
 ```
 git branch -d newMergedBranchName
+
+```
+
+#### 61. Stop the merge
+
+```
+git merge --abort
+
+```
+
+#### 62. Undo the merge
+
+It means move the HEAD n Master pointer to the last commit using HEAD~1. It is not a good approach when there is a team in which you are working.
+
+```
+git reset --hard HEAD~1
+
+```
+
+#### 63. Revert the merge
+
+It means move the HEAD n Master pointer to the last commit using -m pointing to the parent
+
+```
+git revert -m 1 HEAD
+
+```
+
+## Squash Merge
+
+Squash is a merge when there are commits in a another branch and also in master branch n you want to add another branch commits and merge into master without using 3 way merge as shown in the figure.
+
+Squash Merge is as follows:
+
+<img src='./squashmerge.png' alt="Fast Forward Merge"/>
+
+#### 64. Merge with Squash Merge
+
+```
+git merge --squash bugfixBranch
+
+```
+
+## Rebase
+
+Rebase is a merge when there are commits in a another branch and also in master branch n you want to you want to change the base of the another branchand make it master as shown in the figure.
+
+Rebase is as follows:
+
+### Before Rebase
+
+<img src='./beforeRebase.png' alt="Before Rebase"/>
+
+### After Rebase
+
+<img src='./afterRebase.png' alt="After Rebase"/>
+
+#### 65. Rebase the branch
+
+Switch the branch.
+
+```
+git rebase master
+
+```
+
+## Cherry Pick
+
+Cherry Pick is feature you want from some commit and want to add into the master branch as shown in the figure.
+
+Rebase is as follows:
+
+### Before Rebase
+
+<img src='./beforeCherryPick.png' alt="Before Cherry Pick"/>
+
+### After Rebase
+
+<img src='./afterCherryPick.png' alt="After Cherry Pick"/>
+
+#### 65. Rebase the branch
+
+Switch the branch.
+
+```
+git cherry-pick 05ab28  #05ab28 is commit id
 
 ```
