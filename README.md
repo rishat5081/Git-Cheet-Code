@@ -194,15 +194,13 @@ There are some tags used with this command.
 git log --oneline -3
 ```
 
-- Chnage -3 to how many numbers of logs you want.
+- Change -3 to how many numbers of logs you want.
 
 #### 23. print changes made in commit
 
 ```
 git log --oneline --patch
 ```
-
-- Chnage -3 to how many numbers of logs you want.
 
 #### 24. print git commits using author name
 
@@ -630,11 +628,16 @@ Rebase is as follows:
 
 <img src='./afterCherryPick.png' alt="After Cherry Pick"/>
 
-#### 65. Rebase the branch
-
-Switch the branch.
+#### 65. Add a commit to the master branch
 
 ```
 git cherry-pick 05ab28  #05ab28 is commit id
+
+```
+
+#### 66. Pick a specific file from a commit to the master branch
+
+```
+git restore source=featureBranch --routes.js
 
 ```
