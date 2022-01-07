@@ -394,6 +394,8 @@ git branch -m newBranch newNameofBranch
 git branch -d  newNameofBranch
 ```
 
+vocabulary
+
 - use `-D` to forcefully delete the branch even if you haven't commit it.
 
 #### 47. View two branches commits
@@ -641,3 +643,44 @@ git cherry-pick 05ab28  #05ab28 is commit id
 git restore source=featureBranch --routes.js
 
 ```
+
+# Git Fetch
+
+The fetch command is use to clone/ fetch the remote branch commits into the master branch.
+if you are using the same git repo, other team member make changes in the repo and push it into the central repo (GITHUB) and you want to merge those changes into your workspace than you will use `fetch`.
+
+```
+git fetch origin Branch Name ||
+
+git fetch origin ||
+
+git fetch
+```
+
+After fetching you have merge it `git merge origin/master`, there may be any conflict you have to resolve the conflict.
+
+# Git Pull
+
+Git pull is advance version of the fetch.
+
+### `Pull = Fetch + Merge`
+
+### Pull
+
+This will make a 3 way merge using a simple pull command.
+
+```
+git pull
+```
+
+<img src='./git pull.png' alt="Git Pull"/>
+
+### Pull --Resbase
+
+This will make linear merge using a pull --rebase command.
+
+```
+git pull --rebase
+```
+
+<img src='./git pull rebase.png' alt="Git Pull Rebase"/>
