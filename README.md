@@ -630,14 +630,14 @@ Rebase is as follows:
 
 <img src='./afterCherryPick.png' alt="After Cherry Pick"/>
 
-#### 65. Add a commit to the master branch
+#### 66. Add a commit to the master branch
 
 ```
 git cherry-pick 05ab28  #05ab28 is commit id
 
 ```
 
-#### 66. Pick a specific file from a commit to the master branch
+#### 67. Pick a specific file from a commit to the master branch
 
 ```
 git restore source=featureBranch --routes.js
@@ -689,7 +689,7 @@ git pull --rebase
 
 Git push did not sent tags to remote repo. You have to send it manually.
 
-#### 67. Push Tag to remote Repo
+#### 68. Push Tag to remote Repo
 
 ```
 git tag v.11  # create Tag
@@ -697,16 +697,40 @@ git tag v.11  # create Tag
 git push origin v.11
 ```
 
-#### 68. Remove Tag from remote Repo
+#### 69. Remove Tag from remote Repo
 
 ```
 git push  origin --delete v.11
 ```
 
-#### 69. Remove Tag from Repo
+#### 70. Remove Tag from Repo
 
 It will remove the tags from the repo
 
 ```
 git -d v.11
+```
+
+#### 71. Push branch to Origin
+
+It will add the branch to the remote origin (GITHUB)
+
+```
+git push -u origin add/PushBranchToOrigin
+```
+
+#### 72. Delete branch from Origin
+
+It will delete the branch from the remote origin (GITHUB)
+
+```
+git push -d origin add/PushBranchToOrigin
+```
+
+#### 73. Delete remote tracking branch
+
+It will delete the branch from the remote origin (GITHUB)
+
+```
+git remote prune origin
 ```
