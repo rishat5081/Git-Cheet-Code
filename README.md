@@ -486,6 +486,14 @@ Merging mean combining the branch changes with the master branch. Two type of me
 1. Fast Forward
 2. 3 ways Merge
 
+## Fast Forward Merge
+
+Fast Forward is a merge when there is commits in a linear way as shown in the figure.
+
+Fast Forward merge is as follows:
+
+<img src='./fastforward merge.png' alt="Fast Forward Merge"/>
+
 #### 55. Merge with Fast Forward
 
 ```
@@ -504,5 +512,42 @@ git merge newNameofBranch
 
 ```
 git merge --no-ff newNameofBranch
+
+```
+
+## 3 Way Merge
+
+3 Way Merge is a merge when there is commits in a master branch and in another branch and it need to merge both the master and branch.
+
+3 Way Merge is as follows:
+
+<img src='./3way merge.png' alt="Fast Forward Merge"/>
+
+#### 58. Merge with 3 ways
+
+Add commit to master
+
+Add commit to the branch
+
+then
+
+switch to master
+
+```
+git merge  commitofBranch
+
+```
+
+#### 59. View Merged with master branch
+
+```
+git branch --merged
+
+```
+
+#### 60. Delete a merged branch
+
+```
+git branch -d newMergedBranchName
 
 ```
