@@ -705,6 +705,8 @@ git push  origin --delete v.11
 
 #### 69. Remove Tag from Repo
 
+It will remove the tags from the repo
+
 ```
 git -d v.11
 ```
